@@ -67,9 +67,6 @@ export default function Projects() {
         ))}
       </div>
       <div className="mt-6 text-center">
-        <p className="font-label text-xs mb-4">
-          ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-        </p>
         <Link
           className="inline-block border-2 border-white px-8 py-2 font-bold hover:bg-white hover:text-black transition-none"
           href="#"
