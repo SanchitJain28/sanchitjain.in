@@ -2,13 +2,13 @@ export interface NavLink {
   href: string;
   label: string;
 }
-
 export interface App {
   title: string;
   icon: string;
   description: string;
   tags: string[];
-  image: string;
+  image?: string;
+  images?: string[];
   link?: string;
 }
 
@@ -34,15 +34,30 @@ export const APPS: App[] = [
     tags: ["RemixJS", "Node.js", "PostgreSQL", "Shopify API"],
     image: "/App1/1.png",
     link: "https://apps.shopify.com/solid-ai-related-products",
+    images: [
+      "/App1/1.png",
+      "/App1/2.png",
+      "/App1/3.png",
+      "/App1/4.png",
+      "/App1/5.png",
+      "/App1/6.png",
+    ],
   },
   {
-    title: "Custom Cart Genius",
+    title: "Pairly - Bundles and Upsell",
     icon: "insights",
     description:
       "Dynamic upsell and cross-sell engine that uses Shopify's Storefront API to boost AOV by 15% through intelligent cart logic.",
     tags: ["RemixJS", "Express", "GraphQL", "Node.js"],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC0KzYYaIirK93ZfS_QFbScQnKkxl8gSTVDExyfmn6_cc6FbDdHrGXNWjH-cmzgmdrodIMEPpjMVc6Oxg9U9-iOmmXScBTkQH8L5t70JpNu3B1iFCMiiD2GSYk1seNEHGuhPaDSbSdjdtvGo02JANjDCHMpJns9I8W0SBrAwTsBWjvxeOXp3g3_6r-XZzlpVoCMMdpiH4_JX1TwE66K4XIPtOnBOB29apGE3l5T_EwsVg_0bFGPjdfBp8UAXPzz_liX93NAc7N8n4c",
+    image: "/App2/1.png",
+    images: [
+      "/App2/1.png",
+      "/App2/2.png",
+      "/App2/3.png",
+      "/App2/4.png",
+      "/App2/5.png",
+      "/App2/6.png",
+    ],
   },
 ];
 
@@ -78,4 +93,22 @@ export const FOOTER_LINKS: string[] = [
   "LinkedIn",
   "GitHub",
   "Twitter",
+];
+
+export interface Skill {
+  name: string;
+  icon: string;
+}
+
+export const SKILLS: Skill[] = [
+  { name: "React / Next.js", icon: "language" },
+  { name: "TypeScript", icon: "data_object" },
+  { name: "Shopify API", icon: "shopping_cart" },
+  { name: "Node.js & Express", icon: "dns" },
+  { name: "PostgreSQL", icon: "database" },
+  { name: "GraphQL", icon: "hub" },
+  { name: "Tailwind CSS", icon: "palette" },
+  { name: "GSAP Animation", icon: "animation" },
+  { name: "RemixJS", icon: "route" },
+  { name: "Liquid Customization", icon: "water_drop" },
 ];

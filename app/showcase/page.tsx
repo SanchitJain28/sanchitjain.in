@@ -3,6 +3,7 @@ import { Header } from "@/components/showcase/layout/Header";
 import { Contact } from "@/components/showcase/sections/Contact";
 import { Hero } from "@/components/showcase/sections/Hero";
 import { Services } from "@/components/showcase/sections/Services";
+import { Skills } from "@/components/showcase/sections/Skills";
 import { Work } from "@/components/showcase/sections/Work";
 
 export default function Portfolio() {
@@ -22,6 +23,7 @@ export default function Portfolio() {
         <main className="pt-24">
           <Hero />
           <Work />
+          <Skills />
           <Services />
           <Contact />
         </main>
