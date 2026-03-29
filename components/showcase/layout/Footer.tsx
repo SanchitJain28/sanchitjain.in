@@ -8,16 +8,16 @@ export function Footer() {
         <div className="flex gap-8">
           {FOOTER_LINKS.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.url}
               className="font-[Inter] text-xs tracking-widest uppercase text-slate-500 hover:text-[#a9d55a] transition-colors duration-200"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
         <div className="font-[Inter] text-xs tracking-widest uppercase text-slate-500">
-          © 2024 Sanchit Jain. Built for Shopify Plus.
+          © 2026 Sanchit Jain. Built for Shopify Plus.
         </div>
       </div>
     </footer>

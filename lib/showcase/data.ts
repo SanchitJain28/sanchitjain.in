@@ -50,6 +50,7 @@ export const APPS: App[] = [
       "Dynamic upsell and cross-sell engine that uses Shopify's Storefront API to boost AOV by 15% through intelligent cart logic.",
     tags: ["RemixJS", "Express", "GraphQL", "Node.js"],
     image: "/App2/1.png",
+    link: "https://pairly-bundles.online",
     images: [
       "/App2/1.png",
       "/App2/2.png",
@@ -88,11 +89,16 @@ export const SERVICES: Service[] = [
   },
 ];
 
-export const FOOTER_LINKS: string[] = [
-  "Email",
-  "LinkedIn",
-  "GitHub",
-  "Twitter",
+interface FooterLink {
+  label: string;
+  url: string;
+}
+
+export const FOOTER_LINKS: FooterLink[] = [
+  { label: "Email", url: "mailto:sanchit@sanchitjain.in" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/in/sanchitjain28" },
+  { label: "GitHub", url: "https://github.com/SanchitJain28" },
+  { label: "Twitter", url: "https://twitter.com/sanchitjain" },
 ];
 
 export interface Skill {
