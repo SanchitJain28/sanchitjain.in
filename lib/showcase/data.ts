@@ -2,7 +2,7 @@ export interface NavLink {
   href: string;
   label: string;
 }
-export interface App {
+export interface Project {
   title: string;
   icon: string;
   description: string;
@@ -25,7 +25,7 @@ export const NAV_LINKS: NavLink[] = [
   { href: "#contact", label: "Contact" },
 ];
 
-export const APPS: App[] = [
+export const PROJECTS: Project[] = [
   {
     title: "AI CrossSell, Related & Upsell",
     icon: "shopping_bag",
@@ -60,6 +60,57 @@ export const APPS: App[] = [
       "/App2/6.png",
     ],
   },
+  {
+    title: "AI CrossSell, Related & Upsell",
+    icon: "shopping_bag",
+    description:
+      "AI upsell, cross sell & related recommendations for every product without any setup using AI & CRO",
+    tags: ["RemixJS", "Node.js", "PostgreSQL", "Shopify API"],
+    image: "/App1/1.png",
+    link: "https://apps.shopify.com/solid-ai-related-products",
+    images: [
+      "/App1/1.png",
+      "/App1/2.png",
+      "/App1/3.png",
+      "/App1/4.png",
+      "/App1/5.png",
+      "/App1/6.png",
+    ],
+  },
+  {
+    title: "AI CrossSell, Related & Upsell",
+    icon: "shopping_bag",
+    description:
+      "AI upsell, cross sell & related recommendations for every product without any setup using AI & CRO",
+    tags: ["RemixJS", "Node.js", "PostgreSQL", "Shopify API"],
+    image: "/App1/1.png",
+    link: "https://apps.shopify.com/solid-ai-related-products",
+    images: [
+      "/App1/1.png",
+      "/App1/2.png",
+      "/App1/3.png",
+      "/App1/4.png",
+      "/App1/5.png",
+      "/App1/6.png",
+    ],
+  },
+  {
+    title: "AI CrossSell, Related & Upsell",
+    icon: "shopping_bag",
+    description:
+      "AI upsell, cross sell & related recommendations for every product without any setup using AI & CRO",
+    tags: ["RemixJS", "Node.js", "PostgreSQL", "Shopify API"],
+    image: "/App1/1.png",
+    link: "https://apps.shopify.com/solid-ai-related-products",
+    images: [
+      "/App1/1.png",
+      "/App1/2.png",
+      "/App1/3.png",
+      "/App1/4.png",
+      "/App1/5.png",
+      "/App1/6.png",
+    ],
+  },
 ];
 
 export const SERVICES: Service[] = [
@@ -87,6 +138,25 @@ export const SERVICES: Service[] = [
     description:
       "Robust architecture using Node.js, Express, and PostgreSQL for scale and performance.",
   },
+  {
+    number: "03",
+    title: "API Integrations",
+    description:
+      "Seamless connection between Shopify and your external ERP, CRM, or custom database systems.",
+  },
+  {
+    number: "04",
+    title: "Backend Excellence",
+    description:
+      "Robust architecture using Node.js, Express, and PostgreSQL for scale and performance.",
+  },
+  {
+    number: "03",
+    title: "API Integrations",
+    description:
+      "Seamless connection between Shopify and your external ERP, CRM, or custom database systems.",
+  },
+  
 ];
 
 interface FooterLink {

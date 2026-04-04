@@ -9,25 +9,26 @@ import { Work } from "@/components/showcase/sections/Work";
 export default function Portfolio() {
   return (
     <>
-      {/* It's usually better to put fonts in your app/layout.tsx using next/font, but leaving it here to maintain your styling structure */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
-        .material-symbols-outlined {
-          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
       `}</style>
 
-      <div className="bg-[#121416] text-[#e2e2e5] min-h-screen font-[Inter] selection:bg-[#a9d55a] selection:text-[#243600]">
+      
+      <div className="flex flex-col md:flex-row h-screen w-full bg-[#FFFFFF] text-[#000000] font-['Inter'] selection:bg-[#000000] selection:text-[#FFFFFF] overflow-hidden">
         <Header />
-        <main className="pt-24">
-          <Hero />
-          <Work />
-          <Skills />
-          <Services />
-          <Contact />
-        </main>
-        <Footer />
+
+        {/* Scrollable Content Canvas */}
+        <div className="flex-1 overflow-y-auto relative bg-[#FFFFFF]">
+          <main className="w-full mx-auto md:py-12 flex flex-col">
+            <Hero />
+            <Work />
+            <Skills />
+            <Services />
+            <Contact />
+          </main>
+
+          <Footer />
+        </div>
       </div>
     </>
   );

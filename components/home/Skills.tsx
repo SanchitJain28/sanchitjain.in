@@ -12,7 +12,7 @@ export default function Skills() {
 
   return (
     <section
-      className="p-6 md:p-12 border-b-2 border-white bg-white text-black"
+      className="py-6 md:p-12 border-b-2 border-white bg-white text-black"
       id="skills"
     >
       <h2 className="font-headline text-xl font-bold uppercase mb-8">
