@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "TERMINAL_PORTFOLIO // ROOT_USER",
-  description: "Dev Manifest v1.0",
+  title: "Sanchit Jain",
+  description: "Dev Manifest",
 };
 
 export default function RootLayout({

@@ -1,26 +1,33 @@
 export default function Hero() {
   return (
-    <section className="p-6 md:p-12 border-b-2 border-white min-h-[614px] flex flex-col justify-center">
+    <section className="p-6 md:p-12 lg:p-24 border-b border-surface flex flex-col justify-center bg-[#FFFFFF]">
       <div className="max-w-4xl">
-        <div className="font-label text-xs mb-4 opacity-70">
-          SYSTEM_INITIALIZED_2024.exe
+        <div className="font-['Space_Grotesk'] text-[0.75rem] font-bold mb-8 text-surface tracking-widest uppercase inline-block border border-surface px-3 py-1">
+          [INFO] SYSTEM_INITIALIZED.exe
         </div>
-        <h1 className="font-headline text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-6">
+
+        <h1 className="font-['Space_Grotesk'] text-[4rem] md:text-[6.5rem] lg:text-[8rem] font-bold uppercase tracking-tighter leading-[0.85] mb-8 text-surface wrap-break-word">
           FULLSTACK
           <br />
-          DEVELOPER<span className="blinking-cursor text-white">█</span>
+          DEVELOPER
         </h1>
-        <p className="font-body text-xl max-w-xl mb-8 leading-tight">
+
+        <p className="font-['Inter'] text-lg md:text-xl max-w-xl mb-12 leading-tight text-surface font-medium">
           ENGINEERING HIGH-DENSITY DIGITAL INTERFACES WITH UNCOMPROMISING
-          CLARITY. CURRENTLY:[AVAILABLE_FOR_HIRE]
+          CLARITY. CURRENTLY:{" "}
+          <span className="bg-surface text-[#FFFFFF] px-1 whitespace-nowrap">
+            [AVAILABLE_FOR_HIRE]
+          </span>
         </p>
-        <div className="flex flex-wrap gap-4">
-          <button className="bg-white text-black px-6 py-3 font-bold uppercase hover:bg-black hover:text-white border-2 border-white transition-none">
-            [ GET IN TOUCH ] →
+
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <button className="flex items-center justify-center bg-surface text-[#FFFFFF] px-8 py-5 font-['Space_Grotesk'] text-sm font-bold uppercase tracking-tight border border-surface hover:bg-[#FFFFFF] hover:text-surface transition-none rounded-none">
+            GET IN TOUCH →
           </button>
-          <div className="border-2 border-white px-6 py-3 font-bold uppercase flex items-center gap-2">
-            <span className="w-2 h-2 bg-white animate-pulse"></span>
-            LOCATED: UTC+1
+
+          <div className="flex items-center justify-center bg-[#FFFFFF] text-surface px-8 py-5 font-['Space_Grotesk'] text-sm font-bold uppercase tracking-tight border border-surface rounded-none gap-3">
+            <span className="w-3 h-3 bg-surface"></span>[LOCATED: IST /
+            UTC+5:30]
           </div>
         </div>
       </div>

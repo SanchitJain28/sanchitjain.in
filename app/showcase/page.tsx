@@ -17,7 +17,6 @@ export default function Portfolio() {
       <div className="flex flex-col md:flex-row h-screen w-full bg-[#FFFFFF] text-[#000000] font-['Inter'] selection:bg-[#000000] selection:text-[#FFFFFF] overflow-hidden">
         <Header />
 
-        {/* Scrollable Content Canvas */}
         <div className="flex-1 overflow-y-auto relative bg-[#FFFFFF]">
           <main className="w-full mx-auto md:py-12 flex flex-col">
             <Hero />

@@ -4,7 +4,6 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-// Updated Interface to allow ReactNode in description for tags/buttons
 interface ContentItem {
   title: string;
   description: React.ReactNode | string;
@@ -45,7 +44,7 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="relative flex h-[70vh] w-full border border-[#000000] bg-[#FFFFFF] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      className="relative flex h-[70vh] w-full border border-surface bg-[#FFFFFF] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       ref={ref}
     >
       {/* Left Column: Text Content */}
@@ -60,12 +59,11 @@ export const StickyScroll = ({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.2 }}
                 transition={{ duration: 0.1, ease: "linear" }}
-                className="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold uppercase tracking-tighter text-[#000000] flex items-start gap-3"
+                className="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold uppercase tracking-tighter text-surface flex items-start gap-3"
               >
-                {/* Mechanical Block Cursor for active state */}
                 <span
                   className={cn(
-                    "text-[#000000] w-6",
+                    "text-surface w-6",
                     activeCard === index
                       ? "opacity-100 animate-pulse"
                       : "opacity-0",
@@ -92,7 +90,7 @@ export const StickyScroll = ({
       {/* Right Column: Sticky Media Display */}
       <div
         className={cn(
-          "sticky top-0 hidden h-[70vh] w-1/2 overflow-hidden border-l border-[#000000] bg-[#000000] lg:flex items-center justify-center p-8",
+          "sticky top-0 hidden h-[70vh] w-1/2 overflow-hidden border-l border-surface bg-surface lg:flex items-center justify-center p-8",
           contentClassName,
         )}
       >
