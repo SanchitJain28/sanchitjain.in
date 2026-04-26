@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useState, createContext, useContext } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Links {
   label: string;
@@ -120,10 +120,21 @@ export const MobileSidebar = ({
           S. JAIN
         </span>
         <button
-          className="font-mono text-xs font-bold text-[#FFFFFF] bg-[#000000] px-3 py-2 border border-[#000000] hover:bg-[#FFFFFF] hover:text-[#000000] transition-none"
+          className="flex items-center gap-2 font-mono text-xs font-bold text-[#FFFFFF] bg-[#000000] px-3 py-2 border border-[#000000] hover:bg-[#FFFFFF] hover:text-[#000000] transition-none"
           onClick={() => setOpen(!open)}
         >
-          [ MENU ]
+          <span>MENU</span>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="2" y="5" width="20" height="2" fill="currentColor" />
+            <rect x="2" y="11" width="20" height="2" fill="currentColor" />
+            <rect x="2" y="17" width="20" height="2" fill="currentColor" />
+          </svg>
         </button>
       </div>
       <AnimatePresence>
@@ -137,20 +148,32 @@ export const MobileSidebar = ({
               ease: "linear",
             }}
             className={cn(
-              // Removed border-r, added strict z-index to overlay everything
               "fixed h-full w-full inset-0 bg-[#FFFFFF] p-6 z-[100] flex flex-col justify-between",
               className,
             )}
           >
             <div className="absolute right-6 top-6 z-50">
               <button
-                className="font-mono text-xs font-bold text-[#FFFFFF] bg-[#000000] px-3 py-2 border border-[#000000] hover:bg-[#FFFFFF] hover:text-[#000000] transition-none"
+                className="flex items-center gap-2 font-mono text-xs font-bold text-[#FFFFFF] bg-[#000000] px-3 py-2 border border-[#000000] hover:bg-[#FFFFFF] hover:text-[#000000] transition-none"
                 onClick={() => setOpen(!open)}
               >
-                [ CLOSE ]
+                <span>CLOSE</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4L20 20M20 4L4 20"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="square"
+                  />
+                </svg>
               </button>
             </div>
-            {/* The menu content */}
             <div className="mt-12 flex-1">{children}</div>
           </motion.div>
         )}
@@ -158,6 +181,7 @@ export const MobileSidebar = ({
     </div>
   );
 };
+
 export const SidebarLink = ({
   link,
   className,

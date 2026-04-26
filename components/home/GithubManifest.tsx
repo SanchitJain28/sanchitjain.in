@@ -46,9 +46,7 @@ export default function GithubManifest() {
   const calendar = data.contributionsCollection.contributionCalendar;
   const repos = data.pinnedItems.nodes;
 
-  // The Brutalist Density Matrix mapping
   const getDensitySquare = (level: ContributionLevel, date: string) => {
-    // Shared container styles: strict 1px solid black, pure white background
     const containerClasses =
       "w-[12px] h-[12px] sm:w-[14px] sm:h-[14px] border border-surface flex items-center justify-center transition-none";
 
@@ -110,7 +108,7 @@ export default function GithubManifest() {
     <section className="relative w-full border-t border-surface bg-[#FFFFFF]">
       <div className="bg-surface text-[#FFFFFF] w-full p-4 md:px-8 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-surface">
         <h2 className="font-['Space_Grotesk'] text-[2rem] md:text-[3rem] font-bold tracking-tighter leading-[0.9] uppercase">
-          Open_Source
+          GITHUB
           <span className="italic block md:inline md:ml-4 text-[#FFFFFF]">
             Manifest.
           </span>
@@ -163,7 +161,6 @@ export default function GithubManifest() {
           </div>
         </div>
 
-        {/* RIGHT/BOTTOM PANEL: Pinned Repos */}
         <div className="w-full xl:w-1/2 bg-[#FFFFFF]">
           <div className="grid grid-cols-1 md:grid-cols-2 h-full">
             {repos.map((repo, index) => (
@@ -174,12 +171,12 @@ export default function GithubManifest() {
                 rel="noreferrer"
                 className={`group flex flex-col justify-between p-6 bg-[#FFFFFF] hover:bg-surface border-b border-surface ${
                   index % 2 === 0 ? "md:border-r" : ""
-                } transition-none cursor-pointer min-h-[220px]`}
+                } transition-none cursor-pointer `}
               >
                 <div>
                   <div className="flex justify-between items-start mb-6">
                     <span className="inline-block px-2 py-0.5 border border-surface bg-surface text-[#FFFFFF] group-hover:bg-[#FFFFFF] group-hover:text-surface font-['Space_Grotesk'] text-[0.65rem] font-bold uppercase tracking-widest transition-none">
-                      [REPO]
+                      REPO
                     </span>
                     {repo.primaryLanguage && (
                       <span className="font-['Space_Grotesk'] text-[0.70rem] font-bold text-surface group-hover:text-[#FFFFFF] uppercase tracking-tighter transition-none">
@@ -191,20 +188,22 @@ export default function GithubManifest() {
                   <h4 className="font-['Space_Grotesk'] text-[1.5rem] font-bold uppercase tracking-tighter text-surface group-hover:text-[#FFFFFF] break-words mb-3 leading-[1]">
                     {repo.name}
                   </h4>
-                  <p className="font-['Inter'] text-sm text-surface group-hover:text-[#FFFFFF] leading-tight transition-none">
-                    {repo.description || "NO_DATA_PROVIDED"}
-                  </p>
+                  {repo.description && (
+                    <p className="font-['Inter'] text-sm text-surface group-hover:text-[#FFFFFF] leading-tight transition-none">
+                      {repo.description || ""}
+                    </p>
+                  )}
                 </div>
 
                 {/* Bottom Metadata */}
-                <div className="mt-8 flex gap-4 border-t border-surface group-hover:border-[#FFFFFF] pt-4 transition-none">
+                {/* <div className="mt-8 flex gap-4 border-t border-surface group-hover:border-[#FFFFFF] pt-4 transition-none">
                   <span className="font-['Space_Grotesk'] text-[0.75rem] font-bold text-surface group-hover:text-[#FFFFFF] uppercase transition-none">
                     [STARS: {repo.stargazerCount}]
                   </span>
                   <span className="font-['Space_Grotesk'] text-[0.75rem] font-bold text-surface group-hover:text-[#FFFFFF] uppercase transition-none">
                     [FORKS: {repo.forkCount}]
                   </span>
-                </div>
+                </div> */}
               </a>
             ))}
           </div>

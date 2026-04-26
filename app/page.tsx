@@ -4,10 +4,10 @@ import Hero from "@/components/home/Hero";
 import Projects from "@/components/home/Projects";
 import Skills from "@/components/home/Skills";
 import Contact from "@/components/home/Contact";
-import Footer from "@/components/home/Footer";
 import ScrollProgress from "@/components/home/ScrollProgress";
 import GithubManifest from "@/components/home/GithubManifest";
 import { Header } from "@/components/showcase/layout/Header";
+import { Footer } from "@/components/showcase/layout/Footer";
 
 export default function Home() {
   return (

@@ -24,14 +24,11 @@ import {
 import { Button as StatefulButton } from "@/components/ui/stateful-button";
 import Link from "next/link";
 
-// --- Extracted Form Component to access useModal() hook ---
 const ModalForm = () => {
   const { setOpen } = useModal();
 
   const handleTransmit = async () => {
-    // Fake 2-second API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    // Closes the modal half a second after the success checkmark appears
     setTimeout(() => {
       setOpen(false);
     }, 600);
