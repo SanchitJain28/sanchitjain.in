@@ -62,8 +62,6 @@ export async function GET() {
     const data = await response.json();
     const githubData: GitHubManifestData = data.data.user;
 
-    logToServer("Fetched GitHub data", githubData, "github_api");
-
     return NextResponse.json(githubData);
   } catch (error) {
     console.log(error);

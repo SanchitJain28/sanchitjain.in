@@ -13,7 +13,6 @@ const useBrutalistTheme = (variant: "black" | "white" = "white") => {
   };
 };
 
-// Reusable extremely dense geometric patterns for the brutalist aesthetic
 const BrutalistPatterns = ({ fg, uid }: { fg: string; uid: string }) => (
   <defs>
     <pattern
@@ -89,10 +88,7 @@ export const Javascript = ({
       <rect width="64" height="64" fill={bg} />
       <rect width="64" height="64" fill={`url(#grid-${uid})`} />
       <rect x="12" y="12" width="48" height="48" fill={fg} />
-      {/* Brutalist 'J' */}
-      <path d="M 32 20 h 8 v 24 h -16 v -8 h 4 v 4 h 4 z" fill={bg} />
-      {/* Brutalist 'S' */}
-      <path
+      <path d="M 32 20 h 8 v 24 h -16 v -8 h 4 v 4 h 4 z" fill={bg} />      <path
         d="M 44 20 h 12 v 6 h -8 v 4 h 8 v 14 h -12 v -6 h 8 v -6 h -8 z"
         fill={bg}
       />
