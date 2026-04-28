@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { FloatingChat } from "@/components/FloatingChat";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -23,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark scroll-smooth", "font-sans", geist.variable)}>
+    <html
+      lang="en"
+      className={cn("dark scroll-smooth", "font-sans", geist.variable)}
+    >
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -34,6 +38,7 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} font-body selection:bg-white selection:text-black ascii-bg min-h-screen`}
       >
         {children}
+        <FloatingChat />
       </body>
     </html>
   );

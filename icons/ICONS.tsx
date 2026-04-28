@@ -88,7 +88,8 @@ export const Javascript = ({
       <rect width="64" height="64" fill={bg} />
       <rect width="64" height="64" fill={`url(#grid-${uid})`} />
       <rect x="12" y="12" width="48" height="48" fill={fg} />
-      <path d="M 32 20 h 8 v 24 h -16 v -8 h 4 v 4 h 4 z" fill={bg} />      <path
+      <path d="M 32 20 h 8 v 24 h -16 v -8 h 4 v 4 h 4 z" fill={bg} />{" "}
+      <path
         d="M 44 20 h 12 v 6 h -8 v 4 h 8 v 14 h -12 v -6 h 8 v -6 h -8 z"
         fill={bg}
       />
@@ -1316,6 +1317,133 @@ const Email = ({
   );
 };
 
+const Instagram = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#grid-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist Camera Shell */}
+      <rect
+        x="18"
+        y="18"
+        width="36"
+        height="36"
+        fill="none"
+        stroke={bg}
+        strokeWidth="6"
+      />
+      {/* Brutalist Inner Lens */}
+      <rect
+        x="28"
+        y="28"
+        width="16"
+        height="16"
+        fill="none"
+        stroke={bg}
+        strokeWidth="4"
+      />
+      {/* Brutalist Flash Dot */}
+      <rect x="44" y="24" width="4" height="4" fill={bg} />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const Phone = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#hatch-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist 45-Degree Handset */}
+      <g transform="rotate(45 36 36)">
+        <path
+          d="M 28 20 h 16 v 10 h -4 v 12 h 4 v 10 h -16 v -10 h 4 v -12 h -4 z"
+          fill={bg}
+        />
+      </g>
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const WhatsApp = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#dots-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist Speech Bubble Shell */}
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M 14 16 h 44 v 32 h -24 l -12 12 v -12 h -8 z M 20 22 v 20 h 8 v 8 l 8 -8 h 16 v -20 z"
+        fill={bg}
+      />
+      {/* Miniature Handset Rotated Inside */}
+      <g transform="rotate(45 36 34)">
+        <path
+          d="M 32 24 h 8 v 4 h -2 v 12 h 2 v 4 h -8 v -4 h 2 v -12 h -2 z"
+          fill={bg}
+        />
+      </g>
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
 export const Icons = {
   Javascript,
   Typescript,
@@ -1345,4 +1473,7 @@ export const Icons = {
   Projects,
   Resume,
   Email,
+  Instagram,
+  Phone,
+  WhatsApp,
 };
