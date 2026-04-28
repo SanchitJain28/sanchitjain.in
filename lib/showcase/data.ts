@@ -165,7 +165,7 @@ interface FooterLink {
 }
 
 export const FOOTER_LINKS: FooterLink[] = [
-  { label: "Email", url: "mailto:sanchit@sanchitjain.in" },
+  { label: "Email", url: "mailto:sanchit@sanchitjain.in"  },
   { label: "LinkedIn", url: "https://www.linkedin.com/in/sanchitjain28" },
   { label: "GitHub", url: "https://github.com/SanchitJain28" },
   { label: "Twitter", url: "https://twitter.com/sanchitjain" },

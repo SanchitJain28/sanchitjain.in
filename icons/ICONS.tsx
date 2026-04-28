@@ -1116,6 +1116,210 @@ export const Cms = ({
   );
 };
 
+const Linkedin = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#grid-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist 'i' Dot */}
+      <rect x="22" y="22" width="6" height="6" fill={bg} />
+      {/* Brutalist 'i' Stem */}
+      <rect x="22" y="32" width="6" height="18" fill={bg} />
+      {/* Brutalist 'n' Shape */}
+      <path d="M 32 32 h 18 v 18 h -6 v -12 h -6 v 12 h -6 z" fill={bg} />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const Github = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#dots-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist Octocat Silhouette */}
+      <path
+        d="M 20 18 h 8 v 4 h 16 v -4 h 8 v 12 h 4 v 16 h -8 v 8 h -24 v -8 h -8 v -16 h 4 z"
+        fill={bg}
+      />
+      {/* Octocat Face Features */}
+      <rect x="28" y="34" width="4" height="4" fill={fg} />
+      <rect x="40" y="34" width="4" height="4" fill={fg} />
+      <rect x="34" y="42" width="4" height="4" fill={fg} />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const Twitter = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#hatch-rev-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist Sharp X */}
+      <path
+        d="M 20 20 h 12 l 4 4 l 4 -4 h 12 v 12 l -4 4 l 4 4 v 12 h -12 l -4 -4 l -4 4 h -12 v -12 l 4 -4 l -4 -4 z"
+        fill={bg}
+      />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const Projects = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#stripes-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist Left Chevron '<' */}
+      <path d="M 28 20 L 16 36 L 28 52 L 34 52 L 22 36 L 34 20 Z" fill={bg} />
+      {/* Brutalist Right Chevron '>' */}
+      <path d="M 44 20 L 56 36 L 44 52 L 38 52 L 50 36 L 38 20 Z" fill={bg} />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const Resume = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#hatch-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Brutalist Document Base with missing folded corner */}
+      <path d="M 22 20 h 20 v 8 h 8 v 24 h -28 z" fill={bg} />
+
+      {/* Document Detail Lines */}
+      <rect x="26" y="28" width="12" height="4" fill={fg} />
+      <rect x="26" y="36" width="20" height="4" fill={fg} />
+      <rect x="26" y="44" width="16" height="4" fill={fg} />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
+const Email = ({
+  variant,
+  size = 64,
+  className,
+  ...props
+}: BrutalistIconProps) => {
+  const { bg, fg } = useBrutalistTheme(variant);
+  const uid = useId().replace(/:/g, "");
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      {...props}
+    >
+      <BrutalistPatterns fg={fg} uid={uid} />
+      <rect width="64" height="64" fill={bg} />
+      <rect width="64" height="64" fill={`url(#dots-${uid})`} />
+      {/* Foreground Accent Block */}
+      <rect x="12" y="12" width="48" height="48" fill={fg} />
+
+      {/* Envelope Base Block */}
+      <rect x="16" y="22" width="40" height="28" fill={bg} />
+
+      {/* Envelope Flap Creases */}
+      <path d="M 16 22 L 36 38 L 56 22 V 28 L 36 44 L 16 28 Z" fill={fg} />
+
+      <rect width="64" height="64" fill="none" stroke={fg} strokeWidth="4" />
+    </svg>
+  );
+};
+
 export const Icons = {
   Javascript,
   Typescript,
@@ -1139,4 +1343,10 @@ export const Icons = {
   Websockets,
   Ecommerce,
   Cms,
+  Linkedin,
+  Github,
+  Twitter,
+  Projects,
+  Resume,
+  Email,
 };

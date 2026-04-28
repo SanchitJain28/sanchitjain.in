@@ -42,14 +42,12 @@ export default function Skills() {
         </h2>
       </div>
 
-
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 border-t-2 border-l-2 border-surface">
         {skillsData.map((skill) => (
           <div
             key={skill.name}
             className="group aspect-square flex flex-col items-center justify-center gap-4 border-b-2 border-r-2 border-surface bg-[#FFFFFF] hover:bg-surface hover:text-[#FFFFFF] transition-none p-4 text-center cursor-crosshair"
           >
-         
             <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-surface group-hover:text-[#FFFFFF] group-hover:invert transition-none *:w-full *:h-full">
               {skill.Icon && <skill.Icon />}
             </div>

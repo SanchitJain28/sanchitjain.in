@@ -1,5 +1,5 @@
-import { FOOTER_LINKS } from "@/lib/showcase/data";
 import { Globe3D, GlobeMarker } from "@/components/ui/3d-globe";
+import { FOOTER_LINKS } from "./FooterLinks";
 
 export function Footer() {
   const locationMarker: GlobeMarker[] = [
@@ -34,9 +34,13 @@ export function Footer() {
                   href={link.url}
                   className="group flex items-center justify-between border-b border-[#FFFFFF] py-3 text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#000000] transition-none px-2"
                 >
-                  <span className="font-['Space_Grotesk'] text-lg font-bold uppercase tracking-tight">
-                    {link.label}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    {link.icon}
+                    <span className="font-['Space_Grotesk'] text-lg font-bold uppercase tracking-tight">
+                      {link.label}
+                    </span>
+                  </div>
+
                   <span className="font-mono text-sm font-bold opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 transition-transform duration-100">
                     VIEW ↗
                   </span>
