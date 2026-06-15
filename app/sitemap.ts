@@ -1,16 +1,19 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://www.sanchitjain.in";
+  const lastModified = new Date();
+
   return [
     {
-      url: "https://www.sanchitjain.in",
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://www.sanchitjain.in/showcase",
-      lastModified: new Date(),
+      url: `${baseUrl}/showcase`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },

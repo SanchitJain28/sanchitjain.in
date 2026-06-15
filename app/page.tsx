@@ -9,60 +9,99 @@ import { Footer } from "@/components/showcase/layout/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sanchit Jain | Shopify Expert Developer",
+  title: "Sanchit Jain | Shopify Expert Developer in Delhi, India",
   description:
-    "Shopify Expert Developer based in Delhi, India. Building custom Shopify apps, headless storefronts, and API integrations. 2 live apps on Shopify App Store serving 50+ merchants.",
+    "Shopify Expert Developer based in Delhi, India. 2 live apps on Shopify App Store, 50+ merchants served. Custom Shopify apps, headless storefronts, Hydrogen, GraphQL, and API integrations.",
   keywords: [
-    "Shopify Developer",
-    "Shopify Expert",
+    "Shopify Expert Developer Delhi",
     "Shopify App Developer India",
-    "RemixJS",
-    "Node.js",
+    "Custom Shopify App Development",
+    "Shopify Hydrogen Developer",
+    "Headless Shopify Developer",
+    "Shopify Partner India",
+    "Shopify GraphQL Developer",
+    "RemixJS Shopify Developer",
+    "Node.js Shopify Developer",
+    "Freelance Shopify Developer India",
   ],
   authors: [{ name: "Sanchit Jain", url: "https://www.sanchitjain.in" }],
   openGraph: {
     title: "Sanchit Jain | Shopify Expert Developer",
     description:
-      "2 live Shopify apps. 50+ merchants. Custom apps, headless storefronts, API integrations.",
+      "2 live Shopify apps. 50+ merchants. Custom apps, headless storefronts, GraphQL & API integrations. Based in Delhi, India.",
     url: "https://www.sanchitjain.in",
     siteName: "Sanchit Jain",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png", 
+        width: 1200,
+        height: 630,
+        alt: "Sanchit Jain — Shopify Expert Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sanchit Jain | Shopify Expert Developer",
-    description: "Shopify Expert. 2 live apps. 50+ merchants.",
+    description:
+      "2 live Shopify apps. 50+ merchants. Delhi-based Shopify Expert.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.sanchitjain.in",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Sanchit Jain",
-  jobTitle: "Shopify Expert Developer",
-  url: "https://www.sanchitjain.in",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "New Delhi",
-    addressCountry: "IN",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    dateCreated: "2024-01-01T00:00:00Z",
+    dateModified: new Date().toISOString(),
+    mainEntity: {
+      "@type": "Person",
+      "@id": "https://www.sanchitjain.in/#person",
+      name: "Sanchit Jain",
+      jobTitle: "Shopify Expert Developer",
+      description:
+        "Shopify Expert Developer with 2 live apps on Shopify App Store serving 50+ merchants. Specializing in custom Shopify apps, headless storefronts, and API integrations.",
+      url: "https://www.sanchitjain.in",
+      image: "https://www.sanchitjain.in/og-image.png",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "New Delhi",
+        addressRegion: "Delhi",
+        addressCountry: "IN",
+      },
+      sameAs: [
+        "https://linkedin.com/in/sanchitjain28",
+        "https://github.com/SanchitJain28",
+      ],
+      knowsAbout: [
+        "Shopify App Development",
+        "Shopify Hydrogen",
+        "Headless Commerce",
+        "RemixJS",
+        "Node.js",
+        "GraphQL",
+        "PostgreSQL",
+        "Next.js",
+      ],
+    },
   },
-  sameAs: [
-    "https://linkedin.com/in/sanchitjain28",
-    "https://github.com/SanchitJain28",
-  ],
-  knowsAbout: [
-    "Shopify",
-    "RemixJS",
-    "Node.js",
-    "GraphQL",
-    "PostgreSQL",
-    "Next.js",
-  ],
-};
+];
 
 export default function Home() {
   return (
